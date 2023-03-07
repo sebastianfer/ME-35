@@ -16,7 +16,7 @@ class VelocityPublisher(Node):
         self.wheels = Twist()
         self.linear = Vector3()
         self.angular = Vector3()
-        timer_period = 5
+        timer_period = 2
         self.time = self.create_timer(timer_period, self.WheelVelocity)
         
     def WheelVelocity(self):
