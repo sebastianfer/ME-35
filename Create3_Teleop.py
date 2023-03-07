@@ -3,6 +3,7 @@ import rclpy
 import requests
 import json
 
+# import ROS 2 libraries
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import Vector3
@@ -12,7 +13,7 @@ class VelocityPublisher(Node):
     def __init__(self):
         super().__init__('velocity_publisher')
         print('Creating publisher')
-        self.vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
+        self.vel_publisher = self.create_publisher(Twist, '/cmd_vel', 10)   # publish to /cmd_vel
         self.wheels = Twist()
         self.linear = Vector3()
         self.angular = Vector3()
@@ -23,8 +24,9 @@ class VelocityPublisher(Node):
         URL = 'https://api.airtable.com/v0/appOrOyyzywWzK1At/Velocities/?api_key=keyb5LWBSnWfRFG8M'
         r = requests.get(url = URL, params = {})
         data = r.json()    # this returns dictionary
-        velocity = data['records'][0]['fields']
+        velocity = data['records'][0]['fields']  # access records, enter the list and read information in fields
         
+        # parse through the json dictionary
         for key, value in velocity.items():
            if key == 'X Linear Velocity':
                self.linear.x = float(velocity[key])
