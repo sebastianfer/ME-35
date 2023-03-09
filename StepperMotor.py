@@ -38,10 +38,6 @@ for pin in ControlPin:
 
  
 
-# Define advanced sequence
-
-# as shown in manufacturers datasheet
-
 ccw =  [[1,1,0,0],
 
        [0,1,1,0],
