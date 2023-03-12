@@ -9,7 +9,8 @@ from irobot_create_msgs.action import RotateAngle
 class RotateAngleActionClient(Node):
     def __init__(self):
         super().__init__('rotate_angle_action_client')
-        # Positive angles will make the robot move left, Negative angles will make the robot move right
+        
+        # Positive angles will make the robot move left, negative angles will make the robot move right
         angle = float(input('Angle of Rotation (radians): '))
         self._action_client = ActionClient(self, RotateAngle, '/rotate_angle')
         self.send_goal(angle)
