@@ -16,8 +16,6 @@ class RotateAngleActionClient(Node):
         self.send_goal(angle)
 
     def send_goal(self, angle, max_rotation_speed = 1.9):
-        print('Ready for Action')
-
         goal_msg = RotateAngle.Goal()
         goal_msg.angle = angle
         goal_msg.max_rotation_speed = max_rotation_speed
