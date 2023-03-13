@@ -12,8 +12,6 @@ class DriveDistanceActionClient(Node):
         self._action_client = ActionClient(self, DriveDistance, '/drive_distance')
 
     def send_goal(self, distance = 0.5, max_translation_speed = 0.3):
-        print('Ready for Action')
-
         goal_msg = DriveDistance.Goal()
         goal_msg.distance = distance
         goal_msg.max_translation_speed = max_translation_speed
