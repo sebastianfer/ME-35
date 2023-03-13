@@ -33,8 +33,6 @@ rotationNeeded = 0
 rotationCount = 0
 
 while(1):
-    rotationNeeded == 0
-    print("\n")
     userInput = input("Press e-exit, Number of Rotations: ")
     print("\n")
     orientation = input("What orientation (cw or ccw): ")
