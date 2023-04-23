@@ -5,11 +5,12 @@
 #
 # This file creates a single action client for one robot that utilizes the 
 # odometry tool of the Create3 and calls the NavigateToPosition action to make 
-# the robot move to a sepcific destination
+# the robot move to a sepcific destination. The robot then docks into a station,
+# waits a specific amount of time, and then undocks to keeop moving in a circuit.
 #
 # Authors: Sebastian Fernandez, Alex Savic
 # Date: 04/17/23
-# Updated: 
+# Updated: 04/20/23
 ###############################################################################
 import rclpy
 from rclpy.action import ActionClient
