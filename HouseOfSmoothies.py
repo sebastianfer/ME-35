@@ -1,7 +1,7 @@
 ###############################################################################
 # ME35
 # Final Project 
-# SmoothieBar.py
+# HouseOfSmoothies.py
 #
 # This file creates a single action client for one robot that utilizes the 
 # odometry tool of the Create3 and calls the NavigateToPosition action to make 
